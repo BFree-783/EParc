@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Notas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .custom-box {
+            border: 2px solid #f4a460;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .custom-navbar {
+            background-color: #c97b73;
+            margin-bottom: 20px;
+            border: 2px solid #555;
+            border-radius: 4px;
+        }
+        .custom-navbar .nav-link {
+            color: #fff !important;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+        .custom-navbar .nav-link.active {
+            color: #222 !important;
+            font-style: italic;
+            text-decoration: underline;
+        }
+        .table thead th {
+            background-color: #c97b73;
+            color: white;
+        }
+        .table tbody tr:nth-child(even) {
+            background-color: #f5d6d3;
+        }
+        .table tbody tr:nth-child(odd) {
+            background-color: #fff;
+        }
+        .table tbody tr td:first-child {
+            font-weight: bold;
+            color: #3a3a3a;
+        }
+        .table td:empty {
+            background-color: #ffffff !important;
+            border: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container-fluid justify-content-center">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="INICIO.html">INICIO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="HTML.html">HTML</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="CSS.html">CSS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="BOOSTRAP.html">BOOSTSTRAP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CONTACTO</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Formulario de calificación -->
+    <div class="container">
+        <div class="custom-box mt-4">
+            <h6 class="mb-3"><b>Calificación del Alumno</b></h6>
+            <form>
+                <div class="mb-2">
+                    <label class="form-label"><b>Apellidos y Nombres</b></label>
+                    <input type="text" class="form-control" placeholder="Ingrese nombres y apellidos">
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Curso</label>
+                    <select class="form-select">
+                        <option>Seleccione</option>
+                        <option>Matemáticas</option>
+                        <option>Lengua</option>
+                        <option>Ciencias</option>
+                    </select>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Ciclo</label>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="ciclo" id="ciclo1" value="1">
+                            <label class="form-check-label" for="ciclo1">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="ciclo" id="ciclo2" value="2">
+                            <label class="form-check-label" for="ciclo2">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="ciclo" id="ciclo3" value="3">
+                            <label class="form-check-label" for="ciclo3">3</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="ciclo" id="ciclo4" value="4">
+                            <label class="form-check-label" for="ciclo4">4</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label>Nota 01:</label>
+                        <input type="number" class="form-control" min="0" max="20">
+                    </div>
+                    <div class="col">
+                        <label>Nota 02:</label>
+                        <input type="number" class="form-control" min="0" max="20">
+                    </div>
+                    <div class="col">
+                        <label>Nota 03:</label>
+                        <input type="number" class="form-control" min="0" max="20">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-danger">REGISTRAR</button>
+            </form>
+        </div>
+
+        <div class="text-center mt-4">
+            <b>REGISTRO DE NOTAS</b>
+        </div>
+
+        <!-- Tabla de registro de notas -->
+        <div class="table-responsive mt-2">
+            <table class="table table-bordered text-center align-middle">
+                <thead>
+                    <tr>
+                        <th>Alumno</th>
+                        <th>Nota 01</th>
+                        <th>Nota 02</th>
+                        <th>Nota 03</th>
+                        <th>Promedio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Alumno 01</td>
+                        <td>14</td>
+                        <td>13</td>
+                        <td>16</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>Alumno 02</td>
+                        <td></td>
+                        <td>16</td>
+                        <td>18</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>Alumno 03</td>
+                        <td>14</td>
+                        <td>20</td>
+                        <td>17</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>Alumno 04</td>
+                        <td>10</td>
+                        <td></td>
+                        <td>13</td>
+                        <td>19</td>
+                    </tr>
+                    <tr>
+                        <td>Alumno 05</td>
+                        <td>13</td>
+                        <td>17</td>
+                        <td></td>
+                        <td>15</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
